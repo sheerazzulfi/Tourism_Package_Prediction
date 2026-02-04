@@ -60,6 +60,6 @@ input_data = input_data.replace({'Yes': 1, 'No': 0})
 
 if st.button("Predict result"):
     prediction = model.predict(input_data)[0]
-    result = "Customer is likely to purchase" if prediction == 1 else "Customer is not likely to purchase"
+    result = "Customer is likely to purchase the package" if prediction == 1 else "Customer is not likely to purchase the package"
     st.subheader("Prediction Result:")
     st.success(f"The model predicts: **{result}**")
